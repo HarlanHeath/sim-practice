@@ -1,0 +1,11 @@
+Created products table
+CREATE TABLE products ( 
+ID serial PRIMARY KEY,
+name varchar(25),
+price integer,
+img text
+ )
+
+ insert data to products table
+ INSERT INTO products(name,price,img)
+ VALUES('harlan', 10, 'this is an img url')
