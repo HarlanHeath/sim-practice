@@ -9,15 +9,38 @@ export default class Form extends Component {
       imgurl: ""
     };
   }
+
+  handleName = value => {
+    this.setState({ name: value });
+  };
+
+  handlePrice = value => {
+    this.setState({ price: value });
+  };
+
+  handleImg = value => {
+    this.setState({ imgurl: value });
+  };
+
+  handleClear = () => {
+    this.setState({ name: "", price: 0, imgurl: "" });
+  };
+
   render() {
+    console.log(this.state);
     return (
       <div>
         <p>Form</p>
-        <input />
-        <input />
-        <input />
-        <button>Add</button>
-        <button>Cancel</button>
+        <div className="form-card">
+          <span>Name:</span>
+          <input type="text" onChange={e => this.handleName(e.target.value)} />
+          <span>Price:</span>
+          <input type="text" onChange={e => this.handlePrice(e.target.value)} />
+          <span>Image:</span>
+          <input type="text" onChange={e => this.handleImg(e.target.value)} />
+          <button>Add</button>
+          <button onClick={this.handleClear}>Cancel</button>
+        </div>
       </div>
     );
   }
