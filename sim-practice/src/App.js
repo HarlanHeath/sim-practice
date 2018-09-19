@@ -8,14 +8,30 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      inventory: []
+      inventory: [
+        {
+          name: "Car",
+          price: 1000,
+          imgurl: "thisimageofcar.com"
+        },
+        {
+          name: "Boat",
+          price: 2000,
+          imgurl: "thisimageofboat.com"
+        },
+        {
+          name: "Plane",
+          price: 3000,
+          imgurl: "thisimageofplane.com"
+        }
+      ]
     };
   }
   render() {
     return (
       <div className="App">
         <Header />
-        <Dashboard />
+        <Dashboard inventory={this.state.inventory} />
         <Form />
       </div>
     );
