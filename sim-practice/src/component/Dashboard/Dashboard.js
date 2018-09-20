@@ -6,7 +6,7 @@ export default class Dashboard extends Component {
     let inventory = this.props.inventory.map((product, index) => {
       return (
         <div key={index}>
-          <p>{product.imgurl}</p>
+          <p>{product.img}</p>
           <p>{product.price}</p>
           <p>{product.name}</p>
         </div>
