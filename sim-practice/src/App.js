@@ -20,12 +20,19 @@ class App extends Component {
     });
   }
 
+  showProducts = () => {
+    axios.get("/api/inventory").then(res => {
+      console.log(res);
+      this.setState({ inventory: res.data });
+    });
+  };
+
   render() {
     return (
       <div className="App">
         <Header />
         <Dashboard inventory={this.state.inventory} />
-        <Form />
+        <Form showProducts={this.showProducts} />
       </div>
     );
   }

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from "axios";
 
 export default class Form extends Component {
   constructor() {
@@ -24,6 +25,15 @@ export default class Form extends Component {
 
   handleClear = () => {
     this.setState({ name: "", price: 0, imgurl: "" });
+    this.props.showProducts();
+  };
+
+  createProduct = () => {
+    let { name, price, imgurl } = this.state;
+    console.log(imgurl);
+    axios
+      .post("/api/product", { name, price, imgurl })
+      .then(() => this.handleClear());
   };
 
   render() {
@@ -38,7 +48,7 @@ export default class Form extends Component {
           <input type="text" onChange={e => this.handlePrice(e.target.value)} />
           <span>Image:</span>
           <input type="text" onChange={e => this.handleImg(e.target.value)} />
-          <button>Add</button>
+          <button onClick={this.createProduct}>Add</button>
           <button onClick={this.handleClear}>Cancel</button>
         </div>
       </div>
