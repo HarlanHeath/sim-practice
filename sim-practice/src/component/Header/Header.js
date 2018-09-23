@@ -1,9 +1,6 @@
 import React from "react";
+import "./Header.css";
 
 export default () => {
-  return (
-    <div>
-      <p>Header</p>
-    </div>
-  );
+  return <div className="header-main-div">Header</div>;
 };
