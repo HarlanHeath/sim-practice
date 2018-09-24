@@ -3,12 +3,6 @@
 }
 
 .product-card {
-  /* display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  align-content: center; */
   height: 200px;
   width: 200px;
   border: 1px black solid;
@@ -17,4 +11,10 @@
 
 .product-display {
   width: 100vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
 }
