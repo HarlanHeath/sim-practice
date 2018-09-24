@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import "./Form.css";
 
 export default class Form extends Component {
   constructor() {
@@ -42,14 +43,27 @@ export default class Form extends Component {
       <div>
         <p>Form</p>
         <div className="form-card">
-          <span>Name:</span>
-          <input type="text" onChange={e => this.handleName(e.target.value)} />
-          <span>Price:</span>
-          <input type="text" onChange={e => this.handlePrice(e.target.value)} />
-          <span>Image:</span>
-          <input type="text" onChange={e => this.handleImg(e.target.value)} />
-          <button onClick={this.createProduct}>Add</button>
-          <button onClick={this.handleClear}>Cancel</button>
+          <div className="form-input">
+            <span>Name:</span>
+            <input
+              type="text"
+              onChange={e => this.handleName(e.target.value)}
+            />
+            <span>Price:</span>
+            <input
+              type="text"
+              onChange={e => this.handlePrice(e.target.value)}
+            />
+            <span>Image:</span>
+            <input type="text" onChange={e => this.handleImg(e.target.value)} />
+          </div>
+          <br />
+          <button className="form-button" onClick={this.createProduct}>
+            Add
+          </button>
+          <button className="form-button" onClick={this.handleClear}>
+            Cancel
+          </button>
         </div>
       </div>
     );

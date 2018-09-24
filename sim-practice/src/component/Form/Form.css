@@ -1,0 +1,28 @@
+input {
+  width: 50%;
+}
+
+.form-card {
+  height: 400px;
+  width: 400px;
+  background-color: #3ad886;
+  border-radius: 5px;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+.form-button {
+  height: 25px;
+  width: 70px;
+  margin: 40px;
+  border-radius: 5px;
+  border-style: none;
+  background-color: #d34735;
+}
