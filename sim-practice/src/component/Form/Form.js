@@ -41,7 +41,6 @@ export default class Form extends Component {
     console.log(this.state);
     return (
       <div>
-        <p>Form</p>
         <div className="form-card">
           <div className="form-input">
             <span>Name:</span>

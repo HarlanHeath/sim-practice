@@ -15,7 +15,6 @@ export default class Dashboard extends Component {
     });
     return (
       <div className="dashboard-body">
-        <p>Dashboard</p>
         <div className="product-display">{inventory}</div>
         <Product />
       </div>

@@ -1,9 +1,18 @@
 .App {
-  text-align: center;
+  /* text-align: center;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  align-content: center;
+  align-content: center; */
+}
+
+.dashboard-split {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  align-content: stretch;
 }
