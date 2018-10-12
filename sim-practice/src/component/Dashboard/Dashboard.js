@@ -10,9 +10,11 @@ export default class Dashboard extends Component {
           <p>{product.img}</p>
           <p>{product.price}</p>
           <p>{product.name}</p>
+          <button>Delete</button>
         </div>
       );
     });
+    console.log(this.props.inventory);
     return (
       <div className="dashboard-body">
         <div className="product-display">{inventory}</div>

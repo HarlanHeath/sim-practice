@@ -31,14 +31,12 @@ export default class Form extends Component {
 
   createProduct = () => {
     let { name, price, imgurl } = this.state;
-    console.log(imgurl);
     axios
       .post("/api/product", { name, price, imgurl })
       .then(() => this.handleClear());
   };
 
   render() {
-    console.log(this.state);
     return (
       <div>
         <div className="form-card">
