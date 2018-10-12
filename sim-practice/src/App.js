@@ -32,7 +32,9 @@ class App extends Component {
       <div className="App">
         <Header />
         <div className="dashboard-split">
-          <Dashboard inventory={this.state.inventory} />
+          <div className="dashboard-inventory">
+            <Dashboard inventory={this.state.inventory} />
+          </div>
           <br />
           <Form showProducts={this.showProducts} />
         </div>

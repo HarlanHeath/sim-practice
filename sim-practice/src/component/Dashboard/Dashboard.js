@@ -16,10 +16,10 @@ export default class Dashboard extends Component {
     });
     console.log(this.props.inventory);
     return (
-      <div className="dashboard-body">
-        <div className="product-display">{inventory}</div>
-        <Product />
-      </div>
+      // <div className="dashboard-body">
+      <div className="product-display">{inventory}</div>
+
+      // </div>
     );
   }
 }
